@@ -1,0 +1,391 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    background-color: #FFF;
+    color: #555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+}
+.clearfix { zoom:1}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+} 
+ul{
+    list-style: none;
+}
+.icon-small {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    color: #e67e22;
+    margin-right: 10px;
+
+    /*secrets to align text and icons*/
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: -5px;
+}
+
+/* REUSABLE */
+section {
+    padding: 90px;
+}
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+.container {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.block-title {
+    font-size: 52px;
+    font-family: 'Hey August';
+    font-weight: bold;
+    color: #e67e22;
+}
+.block-title-center {
+    font-size: 52px;
+    font-family: 'Hey August';
+    font-weight: bold;
+    color: #e67e22;
+    text-align: center;
+    padding-bottom: 70px;  
+}
+.block-center {
+    font-size: 52px;
+    font-family: 'Hey August';
+    font-weight: bold;
+    color: #e67e22;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/*PARAGRAPH*/
+@font-face {
+    font-family: 'nautilus';
+    src: url('../font/nautilus-webfont.woff2') format('woff2'),
+         url('../font/nautilus-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+ @font-face {
+    font-family: 'Hey August';
+    src : url('../font/Hey August.otf'); 
+} 
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #FFF;
+    font-size: 50px;
+    text-transform: uppercase;
+    font-weight: 300;
+    word-spacing: 4px;
+    letter-spacing: 2.7px;
+}
+h2 {
+    letter-spacing: 0;
+    position: relative;
+    padding: 0 0 10px 0;
+    line-height: 120% !important;
+    margin: 0;
+}
+p {
+    font-size: 18px;
+    padding-bottom: 35px;
+    font-weight: 400;
+    text-align: center;
+}
+h3 {
+    font-size: 18px;
+    padding-bottom: 35px;
+    font-weight: 400;
+}
+h4 {
+    font-size: 24px;
+    font-family: 'Hey August';
+    color: #e67e22;
+    padding-bottom: 10px;
+}
+h5 {
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    color: #e67e22;
+    text-transform: uppercase;
+    padding: 0;
+    letter-spacing: 1px;
+}
+h6{
+    letter-spacing: 1.5px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 100;
+    padding-bottom: 0px;
+}
+.lower {
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    color: #666666;
+    text-transform: inherit;
+    padding: 0;
+    font-weight: 100;
+    margin-bottom: 10px;
+}
+
+
+/*GRID*/
+.grid {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left;
+}
+.two {
+    width: 50%;
+}
+.four{
+    width: 25%;
+}
+
+/*SECTION HEADER*/
+#home {
+    background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(../img/pojok-depan.jpg) no-repeat center top;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    min-height: 100%;
+    background-position: center 0px;
+}
+.logo {
+    width: 100px;
+    height: auto;
+    float: left;
+    margin-top: 20px;
+    background: transparent;
+}
+
+.main-nav {
+    float: right;
+    margin-top: 55px;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.main-nav li a {
+    color: #FFF;
+    text-decoration: none; /*menghilangkan garis bawah*/
+    text-transform: uppercase; /*membuat uppercase*/
+    padding: 8px 0;
+    position: relative;
+    transition: all 0.3s ease; 
+    font-size: 90%;
+    word-spacing: 5px;
+}
+.hero-text-box {
+    margin-top: 40px;
+    position: absolute; /*membuat objek bebas posisi*/
+    top: 50%;
+    left: 50%;
+    width: 1140px;
+    transform: translate(-50%, -50%); /*same function absolute*/
+    text-align: center;
+}
+
+.main-nav li a:hover::before {
+    right: 0;
+    left: 0;
+  }
+.main-nav li a::before {
+    content: "";
+    transition: all 0.4s ease-in-out;
+    position: absolute;
+    right: 50%;
+    left: 50%;
+    bottom: 0;
+    height: 2px;
+    background-color: #e67e22; 
+}
+.btn-more a {
+    background: #e67e22;
+    border: 3px solid #e67e22;
+    color: #fff;
+    min-width: 219px;
+    padding: 10.5px 20px;
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    font-weight: 800;
+    font-size: 18px;
+    transition: all .3s ease-in-out;
+}
+.btn-more a:hover {
+    border: 3px solid #e67e22;
+    background: transparent;
+}
+.btn-more a::before {
+    content: "";
+    transition: all 0.4s ease-in-out;
+    position: absolute;
+    right: 50%;
+    left: 50%;
+    bottom: 0;
+    height: 2px;
+    background-color: #e67e22; 
+}
+.btn-more a:hover::before {
+    right: 0;
+    left: 0;
+  }
+.btn-table {
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+/*ABOUT*/
+.about {
+    padding-bottom: 0;
+}
+.about-img {
+    text-align: center;
+    position: relative;
+    padding-top: 50px;
+}
+.about-img img {
+    border: 10px solid #f1f1f1;
+    box-sizing: border-box;
+    border-radius: 999px;
+    max-width: 100%;
+}
+.main {
+    background: #E6E6E6;
+}
+.inset {
+    position: absolute;
+    top: -50px;
+    right: -70px;
+}
+.unset {
+    position: absolute;
+    top: 160px;
+    right: -70px;
+}
+
+/*MENU*/
+.line {
+    padding-bottom: 0;
+    margin-bottom: 70px !important;
+    border-bottom: 2px solid #e67e22;
+}
+.two-menu {
+    padding-bottom: 10px;
+    width: 50%;
+}
+.gambar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 90px;
+    width: 90px;
+}
+.kata {
+    margin-left: 125px;
+    min-height: 90px;
+}
+.left {
+    font-size: 20px;
+    font-weight: 100;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    color: #666666;
+    padding: 0;
+    letter-spacing: 1px;
+}
+.right {
+    float: right !important;
+    margin-right: 40px;
+    color: #e67e22;
+    font-size: 20px;
+}
+.btn a {
+    background: #e67e22;
+    color: #FFF;
+    border: 2px solid #e67e22;
+    padding: 10.5px 20px;
+    float: right;
+    margin: 20px;
+    text-decoration: none !important;
+    transition: 0.5s;
+}
+.btn a:hover {
+    background: transparent;
+    color: #e67e22;
+    border: 2px solid #e67e22;
+}
+
+/*FOOTER*/
+.contact {
+    background-color: #fff;
+    padding-top: 90px;
+}
+.footer {
+    padding-top: 70px; 
+    padding-bottom: 70px;   
+}
+.four ul li {
+    margin-bottom: 10px;
+}
+.four li a {
+    color: #666666;
+    text-decoration: none;
+    padding-bottom: 1px;
+    transition: 0.1s;
+    font-size: 17px;
+}
+.four li a:hover {
+    color: #e67e22;
+    font-weight: 400;
+}
+.two ul li {
+    padding: 12px;
+}
+.two ul li span {
+    color: #666666;
+    font-size: 14px;
+    margin-left: 50px;
+
+}
+.copyright {
+    background-color: #e67e22;
+    border-top: 2px dotted #fff;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    letter-spacing: 1px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 100;
+}
